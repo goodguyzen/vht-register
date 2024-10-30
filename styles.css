@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('image\(3\).jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container p {
+    padding-top: 20px;
+    font-size: 1.3vw;
+    font-family: "Rubik", sans-serif;
+    font-weight: 4000;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-top: 320px;
+}
+
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.buttons button {
+    background-color: #2f4d66;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    margin: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text to the left */
+    width: 380px; /* Set a fixed width for the button */
+    text-align: left; /* Ensure text is aligned to the left */
+    transition: background-color 0.3s ease; /* Add transition for background color */
+}
+
+.buttons button a {
+    text-decoration: none;
+    color: white;
+}
+
+.buttons button:hover {
+    background-color: #4b7ba3; /* Lighter color on hover */
+}
+
+.buttons span {
+    flex-grow: 1; /* Allow the span to take up available space */
+    text-align: left; /* Align text within the span to the left */
+    display: inline-block;
+}
+
+.social-icons {
+    padding: 40px;
+    display: inline-flex;
+    list-style: none;
+}
+
+.container li {
+    height: 50px;
+    width: 50px;
+    border: 1px solid #fff;
+    margin: 0 15px;
+    border-radius: 50%;
+    margin-top: 25px;
+    transition: transform 0.3s ease, border 0.3s ease; /* Add transition for transform and border */
+}
+
+.container li:hover {
+    transform: scale(1.2); /* Scale up the icon */
+    border: 2px solid #fff; /* Increase the border size */
+}
+
+.container li a {
+    line-height: 53px;
+    font-size: 30px;
+    color: #fff;
+    transition: transform 0.3s ease; /* Add transition for transform */
+}
+
+.container li a:hover {
+    transform: scale(1.2); /* Scale up the icon */
+}
+
+footer {
+    font-size: 0.7em;
+    padding-bottom: 10px;
+}
+
+.fade-out {
+    animation: fadeOut 0.8s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .buttons button {
+        max-width: 1000px;
+        font-size: 0.9em;
+    }
+    
+}
+
+@media (max-width: 600px) {
+
+    .logo {
+        width: 160px;
+        height: auto;
+        margin-top: 35px;
+    }
+
+    .container {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    .buttons button {
+        max-width: 290px;
+        font-size: 0.8em;
+    }
+
+    .container p {
+        font-size: 1em;
+    }
+
+    .social-icons {
+        padding: 5px;
+    }
+
+    .footer {
+        padding-top: 35px;
+    }
+}
+
+/* snowfall anim */
+
+.snow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    opacity: 0.75;
+    z-index: -1;
+  }
+  
+  .snowfall {
+    margin-top: -20px;
+    position: absolute;
+    height: 180%;
+    width: 100%;
+    background: url("https://user-images.githubusercontent.com/7342669/50293046-ab4ed880-0440-11e9-8537-8a0e70729b34.png"),
+      url("https://user-images.githubusercontent.com/7342669/50293049-ad189c00-0440-11e9-8cae-a57ad65c22ca.png"),
+      url("https://user-images.githubusercontent.com/7342669/50294834-c58ab580-0444-11e9-84b6-186b19edf94d.png");
+    animation: letItSnow 20s linear infinite;
+    z-index: -1;
+  }
+  
+  @keyframes letItSnow {
+    0% {
+      background-position: 0px 0px;
+    }
+    100% {
+      background-position: 500px 1000px, 400px 400px, 300px;
+    }
+  }
+
+  
